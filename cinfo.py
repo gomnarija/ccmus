@@ -7,7 +7,7 @@ import curses
 import sys
 
 
-mu_path = "/mu/"
+mu_path = "/home/laza/mu/"
 
 
 
@@ -45,6 +45,7 @@ def cmu_get(field):
 	#status format:	
 	#tag album [ALBUMNAME]
 
+	field+=" "
 	if field in raw.decode():
 		tks = raw.decode().split('\n')
 		return [x for x in tks if field in x][0].replace("tag","").replace(field,"").strip()
